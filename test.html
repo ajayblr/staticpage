@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Convert JSON String to JavaScript Object and Access Individual Values</title>
+</head>
+<body>
+    <script>
+    // Store JSON data in a JS variable
+    var json = '{"name": "Peter", "age": 22, "country": "United States" }';
+    
+    // Converting JSON-encoded string to JS object
+    var obj = JSON.parse(json);
+    
+    // Accessing individual value from JS object
+    document.write(obj.name + "<br>"); // Prints: Peter
+    document.write(obj.age + "<br>"); // Prints: 22
+    document.write(obj.country); // Prints: United States
+    </script>
+</body>
+</html>

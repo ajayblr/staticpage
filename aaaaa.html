@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SDP Project Test Dashboard</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+		
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+      <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});     
+      </script>	
+      <script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['timeline']});     
+      </script>
+	  
+    <!-- Custom styles for this template -->
+	<!-- Uncomment the below line and comment the next line for floating Navbar-->
+    <!--link href="navbar.css" rel="stylesheet"-->
+	<link href="../navbar-top-fixed.css" rel="stylesheet">
+</head>
+<body>
+
+ <!-- Navigation bar start -->
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+	<div class="container">
+		<a class="navbar-brand" href="#"><img src="../assets/img/esb-logo.png" width="175" height="75"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+	<div class="collapse navbar-collapse" id="navbarsExample03">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+			</li>
+
+			<!--li class="nav-item">
+				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+			</li-->
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown03">
+					<a class="dropdown-item" href="smallchangesq42020.html">Small Changes Q4 - 2020</a>
+					<div class="dropdown-divider"></div> 
+						<a class="dropdown-item disabled" aria-disabled="true">Completed Projects</a>
+						<a class="dropdown-item" href="aaaaa.html">Small Changes Q3 - 2020</a>
+						<a class="dropdown-item" href="smallchangesq22020.html">Small Changes Q2 - 2020</a>
+						<a class="dropdown-item" href="#">Small Changes Q1 - 2020</a>
+					    <a class="dropdown-item" href="#">BizTalk Definition - CPS</a>						
+				</div>
+			</li>
+		</ul>
+   </div>
+    <!-- Navbar Right Side -->
+    <div class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="material-icons">Notifications</i>
+                    <span class="badge badge-primary">5</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Notification 1</a>
+                <a class="dropdown-item" href="#">Notification 2</a>
+                <a class="dropdown-item" href="#">Notification 3</a>						  
+            </div>
+        </li>
+       
+ 
+    </div>
+	<!-- Navbar Right Side -->
+	</div>
+</nav>
+<!-- Navigation bar end -->
+
+<div class="container">
+
+  <main role="main">
+	<div class="row">
+	<div class="card">
+
+	 <div class="container-fluid">
+	 
+	     <div class="jumbotron">
+		 <p style="font-size:2.0vw;">Small Changes Q3-2020 Test Timelines</p>
+			<div id = 'timeline' style = "height: 425px; margin: 0 auto">
+			</div>
+			<!--div id = '3dchart'>
+			</div-->
+		</div>
+	 <!-- Work Request updates start -->
+	     <div class="jumbotron">
+          <div class="row">
+		  
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header bg-warning card-header-icon">
+                  <p class="card-category" style="text-align:center" >In Development</p>
+                  <h3 class="card-title" style="text-align:center">0</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header bg-success card-header-icon">
+				  <p class="card-category" style="text-align:center" >Development Completed</p>
+                  <h3 class="card-title" style="text-align:center">9</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header bg-primary card-header-icon">
+				  <p class="card-category" style="text-align:center" >Unit Test Ready</p>
+                  <h3 class="card-title" style="text-align:center">0</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header bg-light card-header-icon">
+				  <p class="card-category" style="text-align:center" >Unit Test Completed</p>
+                  <h3 class="card-title" style="text-align:center">9</h3>
+                </div>
+              </div>
+            </div>
+			
+          </div>
+		</div>
+		<!-- Work Request updates start -->
+		
+		<!-- Test Preparation updates start -->
+	    <div class="jumbotron">  
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card card-chart">
+                <div class="card-header  bg-success">
+                  <h6 class="card-title">System Test Preparation</h6>
+                </div>
+                <div class="card-body">
+                   <canvas id="myChartSTPrep" ></canvas>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <p class="card-category">
+                      <span class="text-success"> 100% </span> Completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-chart">
+                <div class="card-header bg-info">
+                  <h6 class="card-title">System integration Test Preparation</h6>
+                </div>
+                <div class="card-body">
+                  <canvas id="myChartSITPrep"></canvas>
+				  <!--canvas id="3dchart"></canvas-->
+				  
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <p class="card-category">
+                    <span class="text-success">100%</span> Completed</p>
+					
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-chart">
+                <div class="card-header bg-danger">
+                  <h6 class="card-title">User Acceptance Test Preparation</h6>
+                </div>
+				<div class="card-body">
+                  <canvas id="myChartUATPrep" ></canvas>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                      <span class="text-success">100%</span> Completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+		</div>
+		<!-- Test Preparation updates ends -->
+		
+		<!-- ST Execution Phase Graphse contents starts -->
+		<div class="jumbotron">
+		<div class="row">
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header">
+					<p style="font-size:1.2vw;">System Test Results</p>
+					   <canvas class="my-4 w-100" id="stexecutionstatusChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+		  </div>
+		  <div class="col-md-6">
+              <div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">System Test Execution Status <span class="text-success">100%</span></p>
+					<canvas class="my-4 w-100" id="myChartSTExec" width="900" height="380" ></canvas>
+
+                </div>
+                
+              </div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header">
+					<p style="font-size:1.2vw;">System Test Execution Trend</p>
+					   <canvas class="my-4 w-100" id="STtrendChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			
+		  </div>
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header">
+					<p style="font-size:1.2vw;">System Test Defects</p>
+					   <canvas class="my-4 w-100" id="STdefectChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			
+		  </div>
+		</div>
+		</div>
+		
+				<!-- SIT Execution Phase Graphse contents starts -->
+		<div class="jumbotron">
+		<div class="row">
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">System Integration Test Results</p>
+					   <canvas class="my-4 w-100" id="sitexecutionstatusChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+		  </div>
+		  <div class="col-md-6">
+              <div class="card card-chart">
+				<div class="card-header">
+					<p style="font-size:1.2vw;">System Integration Test Execution Status</p>
+                  <canvas class="my-4 w-100" id="myChartSITExec" width="900" height="380" ></canvas>
+                </div>
+                
+              </div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">System Integration Test Execution Trend</p>
+					   <canvas class="my-4 w-100" id="SITtrendChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			
+		  </div>
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">System Integration Test Defects</p>
+					   <canvas class="my-4 w-100" id="SITdefectChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			
+		  </div>
+		</div>
+		</div>
+		
+		
+				<!-- UAT Execution Phase Graphse contents starts -->
+		<div class="jumbotron">
+		<div class="row">
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">User Acceptance Test Results</p>
+					   <canvas class="my-4 w-100" id="uatexecutionstatusChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+		  </div>
+		  <div class="col-md-6">
+              <div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">User Acceptance Test Execution Status</p>
+                  <canvas class="my-4 w-100" id="myChartUATExec" width="900" height="380" ></canvas>
+                </div>
+                
+              </div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">User Acceptance Test Execution Trend</p>
+					   <canvas class="my-4 w-100" id="UATtrendChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			
+		  </div>
+		  <div class="col-md-6">
+			<div class="card card-chart">
+				<div class="card-header" >
+					<p style="font-size:1.2vw;">User Acceptance Test Defects</p>
+					   <canvas class="my-4 w-100" id="UATdefectChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			
+		  </div>
+		</div>
+		</div>		
+		
+	 </div>
+	 
+	 <!-- div body starts heere -->
+	 <!-- div body ends hee -->
+	 
+	 <!--Put the work request here-->
+	 
+		 <div class="col-lg-12 col-md-12">
+			<div class="card">
+				<div class="card-header card-header-warning">
+					<h4 class="card-title">Small Changes Q3- 2020 Work Request</h4>
+					<p class="card-category">Current Status - gone live</p>
+				</div>
+			<div class="card-body table-responsive">
+				<table class="table table-hover">
+					<thead class="text-warning">
+						<th>#</th>
+						<th>Work Request</th>
+						<th>Description</th>
+						<th>System</th>
+						<th>QC Item</th>
+						<th scope="col" class="d-none d-sm-table-cell">Business Analyst</th>
+						<th scope="col" class="d-none d-sm-table-cell">Functional Team</th>
+						<th scope="col" class="d-none d-sm-table-cell">Business Tester</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>79457</td>
+							<td>IRP  Some Customers not receiving their loyalty bonus </td>
+							<td>IRP</td>
+							<td>27484</td>
+							<td scope="col" class="d-none d-sm-table-cell">Ciaran McCallion</td>
+							<td scope="col" class="d-none d-sm-table-cell">Pablo Barbero</td>
+							<td scope="col" class="d-none d-sm-table-cell">William Nellins</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>79594</td>
+							<td>IRP: Loyalty Bonus erroneously being applied</td>
+							<td>IRP</td>
+							<td>27485</td>
+							<td scope="col" class="d-none d-sm-table-cell">Ciaran McCallion</td>
+							<td scope="col" class="d-none d-sm-table-cell">Pablo Barbero</td>
+							<td scope="col" class="d-none d-sm-table-cell">Stephen Brown</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>79682</td>
+							<td>IRP - change to DLAF application in NI tariffs</td>
+							<td>IRP</td>
+							<td>27486</td>
+							<td scope="col" class="d-none d-sm-table-cell">Mostafa Ahmed</td>
+							<td scope="col" class="d-none d-sm-table-cell">Bogdan Tamas</td>
+							<td scope="col" class="d-none d-sm-table-cell">Paddy McCarney, Sarah Gibson</td>
+						</tr>							
+						<tr>
+							<td>4</td>
+							<td>79434</td>
+							<td>CRP: Extend # of Bills Visible</td>
+							<td>CRP</td>
+							<td>27513</td>
+							<td scope="col" class="d-none d-sm-table-cell">Karen Daly</td>
+							<td scope="col" class="d-none d-sm-table-cell">Alex Ghibilic</td>
+							<td scope="col" class="d-none d-sm-table-cell">Debbie Duggan</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>79696</td>
+							<td>Welcome Pack Errors Reconciliation Report</td>
+							<td>SRP</td>
+							<td>27535</td>
+							<td scope="col" class="d-none d-sm-table-cell">Martina McGrath</td>
+							<td scope="col" class="d-none d-sm-table-cell">Alex Ghibilic</td>
+							<td scope="col" class="d-none d-sm-table-cell">Niamh McCarthy, Aoibheann Devlin</td>
+						</tr>	
+						<tr>
+							<td>6</td>
+							<td>79490</td>
+							<td>New Sales Origins Required in CRM7</td>
+							<td>CRP</td>
+							<td>27514</td>
+							<td scope="col" class="d-none d-sm-table-cell">Karen Daly</td>
+							<td scope="col" class="d-none d-sm-table-cell">Syed Ali</td>
+							<td scope="col" class="d-none d-sm-table-cell">Alan Meade</td>
+						</tr>		
+						<tr>
+							<td>7</td>
+							<td>79854</td>
+							<td>Approval/authority levels for Bad debt write off in IRP</td>
+							<td>IRP</td>
+							<td>79952</td>
+							<td scope="col" class="d-none d-sm-table-cell">Martina McGrath</td>
+							<td scope="col" class="d-none d-sm-table-cell">Pablo Barbero</td>
+							<td scope="col" class="d-none d-sm-table-cell">Martin Carty</td>
+						</tr>		
+						<tr>
+							<td>8</td>
+							<td>79703</td>
+							<td>CRM Customer Painpoint identifier </td>
+							<td>CRP</td>
+							<td>27529</td>
+							<td scope="col" class="d-none d-sm-table-cell">Karen Daly</td>
+							<td scope="col" class="d-none d-sm-table-cell">Syed Ali</td>
+							<td scope="col" class="d-none d-sm-table-cell">Emma Bones</td>
+						</tr>		
+						<tr>
+							<td>9</td>
+							<td>79723</td>
+							<td>Add a flag in CRM 7 to identify Landlords </td>
+							<td>CRP</td>
+							<td>27530</td>
+							<td scope="col" class="d-none d-sm-table-cell">Karen Daly</td>
+							<td scope="col" class="d-none d-sm-table-cell">Syed Ali</td>
+							<td scope="col" class="d-none d-sm-table-cell">Jessica Clifford</td>
+						</tr>		
+						
+					</tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+	 <!--Work request Detail ends here-->
+	 </div>
+	 </div>
+	 
+	 
+	 
+  </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+		
+
+<!-- Preparation Chart will be displayed from here--> 
+<!-- ST Preparation Status Chart --> 
+ <script>
+         var ctx = document.getElementById("myChartSTPrep");
+         var myChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ["Test Preparation","Yet to Complete" ],
+                    datasets: [{
+                        data: [100,0],
+                        backgroundColor: ['rgba(0,245,0,1)', 'rgba(31, 73, 125, 1.2)']
+                    }]
+                },
+                options: {
+                    title: {
+                        display: false,
+                        text: 'System Test Preparation'
+                    },
+                    legend: {
+                        display: false,
+                        labels: {
+                                 fontColor: 'rgba(255, 99, 132)'
+                        }
+                    }
+                }
+            })
+</script>
+ 
+<!-- SIT Preparation Status Chart --> 
+ <script>
+	var ctx = document.getElementById('myChartSITPrep');
+	var myChart = new Chart(ctx, {
+		type: 'pie',
+		data: {
+			labels: ["Test Preparation","Yet to Complete" ],
+			datasets: [{
+				data: [100,0],
+				backgroundColor: ['rgba(0,245,0,1)', 'rgba(24,164,254,1)']
+	
+			}]
+		},
+		options: {
+            title: {
+                display: false,
+                text: 'System Test Preparation'
+                },
+            legend: {
+                display: false,
+                 labels: {
+                      fontColor: 'rgba(255, 99, 132)'
+                 }
+                 }
+             }
+
+	})
+</script> 
+
+ 
+<!-- UAT Preparation Status Chart --> 
+ <script>
+	var ctx = document.getElementById('myChartUATPrep');
+	var myChart = new Chart(ctx, {
+		type: 'pie',
+		data: {
+			labels: ['In Progress', 'Yet to Complete'],
+			datasets: [{
+				
+				data: [100,0],
+				backgroundColor: ['rgba(0,245,0,1)', 'rgba(138,0,176,1.2)']
+
+			}]
+		},
+		options: {
+            title: {
+                display: false,
+                text: 'User Acceptance Test Preparation'
+                },
+            legend: {
+                display: false,
+                 labels: {
+                      fontColor: 'rgba(255, 99, 132)'
+                 }
+                 }
+             }		
+
+	})
+</script> 
+<!-- Preparation Chart display ends here--> 
+
+<!-- ST Graphs will be displayed from here -->
+	<!-- System Test Execution progress Pie Chart --> 
+ <script>
+	var ctx = document.getElementById('myChartSTExec');
+	var myChart = new Chart(ctx, {
+	  type: 'pie',
+	  data: {
+        labels: ['Pass', 'No Run'],
+        datasets: [{
+           
+            data: [100,0],
+            backgroundColor: ['rgba(0,245,0,1)', 'rgba(31, 73, 125, 1.2)'],
+ 
+        }]
+    },
+			options: {
+            
+            legend: {
+                display: false,
+				 is3D:true,
+                 labels: {
+                      fontColor: 'rgba(255, 99, 132)'
+                 }
+                 }
+             }	
+  
+	})
+</script> 
+  
+<!-- System Test Execution Status Bar Chart --> 
+ <script>      
+
+  var ctx = document.getElementById('stexecutionstatusChart');
+  
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Passed',
+        'Failed',
+        'Blocked',
+        'N/A',
+        'Not Completed',
+        'No Run',
+        'Deferred'
+      ],
+      datasets: [{
+		data:  [
+          89,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        lineTension: 0,
+        backgroundColor: ['rgba(0, 255, 0, 1)',
+					'rgba(255, 0, 0, 1)',
+					'rgba(169, 169, 169, 1)',
+					'rgba(145, 114, 0, 1)',
+					'rgba(195, 73, 0, 1)',
+					'rgba(19, 120, 181, 1)',
+					'rgba(255, 163, 0, 1)'
+					],
+		borderColor: ['rgba(0, 255, 0, 1)',
+					'rgba(255, 0, 0, 1)',
+					'rgba(169, 169, 169, 1)',
+					'rgba(145, 114, 0, 1)',
+					'rgba(195, 73, 0, 1)',
+					'rgba(19, 120, 181, 1)',
+					'rgba(255, 163, 0, 1)'
+					
+					],
+        borderWidth: 1,
+        pointBackgroundColor: '#0066FF'
+      },
+	  //Pass line
+
+
+	  ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+	
+  })
+ </script>
+
+<!-- 3D System Test Execution Status Pie Chart --> 
+     <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Status');
+            data.addColumn('number', 'Percentage');
+            data.addRows([
+               ['Pass', 59],
+               ['Not Run',19]
+            ]);
+			
+               
+            // Set chart options
+            var options = {
+              // 'title':'Browser market shares at a specific website, 2014',
+              // 'width':550,
+              // 'height':400,
+				'colors': ['#6EB009', '#011049'],
+				legend: 'none', //hide the legend
+               is3D:true
+			   
+            };
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.PieChart(document.getElementById('3dchart'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+
+
+
+
+
+
+
+<!-- System Test Execution Trend graph -->
+ <script>      
+  // Graphs
+  var ctx = document.getElementById('STtrendChart')
+  
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        '10 Aug',
+        '11 Aug',
+        '12 Aug',
+        '13 Aug',
+        '14 Aug',
+        '17 Aug',
+        '18 Aug',
+		'19 Aug',
+		'20 Aug',
+		'21 Aug'
+      ],
+      datasets: [{
+// Planned line      
+	  data: [ 9, 18, 27, 36 , 45 , 53 , 62, 71, 80, 89],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#6699FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#6699FF'
+      },
+	  // Executed line
+	  {
+        data: [0, 2, 13, 25, 25, 49, 68, 84 , 85 , 87],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#0066FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#0066FF'
+      },
+	  //Pass line
+	  {
+        data: [0, 2, 12, 23, 23, 47, 64 ,79 , 80 ,84   ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#33CC00',
+        borderWidth: 2,
+        pointBackgroundColor: '#33CC00'
+      },
+	  // Fail line
+	  {
+        data: [0,0,0,0,0,0,0,0, 1,   2   ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#FF0000',
+        borderWidth: 2,
+        pointBackgroundColor: '#FF0000'
+      }
+	  ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+  })
+ </script>
+ 
+<!-- System Test Defect graph --> 
+ <script>
+	var ctx = document.getElementById('STdefectChart');
+	var myChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: ['New', 'Assigned to Fix', 'In-Progress', 'Feedback Required', 'R4R in Dev', 'Passed in Dev', 'R4R in Test', 'Passed in Test', 'R4R in Pre-Prod', 'Additional Fix Rquired', 'Ready for Closure', 'Closed','Deferred', 'Rejected'],
+			datasets: [{
+				label: '# of Votes',
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+				backgroundColor: [
+					'rgba(217, 217, 217, 1)',
+					'rgba(68, 114, 196, 1)',
+					'rgba(255, 255, 0, 1)',
+					'rgba(91, 155, 213, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(165, 165, 165, 1)',
+					'rgba(84, 130, 53, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(56, 87, 35, 1)',
+					'rgba(112, 48, 160,1)'
+					],
+
+					borderColor: [
+					'rgba(217, 217, 217, 1)',
+					'rgba(68, 114, 196, 1)',
+					'rgba(255, 255, 0, 1)',
+					'rgba(91, 155, 213, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(165, 165, 165, 1)',
+					'rgba(84, 130, 53, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(56, 87, 35, 1)',
+					'rgba(112, 48, 160,1)'
+					],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			},
+			legend: {
+				display: false
+			}
+		}
+	})
+</script>
+
+
+<!-- System Integration Test Execution Status Chart --> 
+	<!-- System Integration Test Execution Prograss Pie Chart --> 
+ <script>
+	var ctx = document.getElementById('myChartSITExec');
+	var myChart = new Chart(ctx, {
+	  type: 'pie',
+	  data: {
+        labels: ['Pass', 'No Run'],
+        datasets: [{
+           
+            data: [10,0],
+			backgroundColor: ['rgba(0,245,0,1)', 'rgba(24,164,254,1)'],
+ 
+        }]
+    },
+			options: {
+            
+            legend: {
+                display: false,
+                 labels: {
+                      fontColor: 'rgba(255, 99, 132)'
+                 }
+                 }
+             }	
+  
+	})
+</script> 
+ 
+ 
+<!-- System Integration Test Execution Status Bar Chart --> 
+ <script>      
+
+  var ctx = document.getElementById('sitexecutionstatusChart');
+  
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Passed',
+        'Failed',
+        'Blocked',
+        'N/A',
+        'Not Completed',
+        'No Run',
+        'Deferred'
+      ],
+      datasets: [{
+		data:  [
+          62,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        lineTension: 0,
+        backgroundColor: ['rgba(0, 255, 0, 1)',
+					'rgba(255, 0, 0, 1)',
+					'rgba(169, 169, 169, 1)',
+					'rgba(145, 114, 0, 1)',
+					'rgba(195, 73, 0, 1)',
+					'rgba(19, 120, 181, 1)',
+					'rgba(255, 163, 0, 1)'
+					],
+		borderColor: ['rgba(0, 255, 0, 1)',
+					'rgba(255, 0, 0, 1)',
+					'rgba(169, 169, 169, 1)',
+					'rgba(145, 114, 0, 1)',
+					'rgba(195, 73, 0, 1)',
+					'rgba(19, 120, 181, 1)',
+					'rgba(255, 163, 0, 1)'
+					
+					],
+        borderWidth: 1,
+        pointBackgroundColor: '#0066FF'
+      },
+	  //Pass line
+
+
+	  ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+	
+  })
+ </script>
+
+<!-- System Integration Test Execution Trend graph -->
+ <script>      
+  // Graphs
+  var ctx = document.getElementById('SITtrendChart')
+  
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        '24 Aug',
+        '25 Aug',
+        '26 Aug',
+        '27 Aug',
+        '28 Aug'
+      ],
+      datasets: [{
+// Planned line      
+	  data: [ 12, 24, 37, 30 , 62 ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#6699FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#6699FF'
+      },
+	  // Executed line
+	  {
+        data: [16,16 ,16 ,58 ,62 ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#0066FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#0066FF'
+      },
+	  //Pass line
+	  {
+        data: [16,16 ,16 ,58 ,62  ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#33CC00',
+        borderWidth: 2,
+        pointBackgroundColor: '#33CC00'
+      },
+	  // Fail line
+	  {
+        data: [ 0,0 ,0 ,0 ,0   ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#FF0000',
+        borderWidth: 2,
+        pointBackgroundColor: '#FF0000'
+      }
+	  ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+  })
+ </script>
+ 
+<!-- System Integration Test Execution Defect graph --> 
+ <script>
+	var ctx = document.getElementById('SITdefectChart');
+	var myChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: ['New', 'Assigned to Fix', 'In-Progress', 'Feedback Required', 'R4R in Dev', 'Passed in Dev', 'R4R in Test', 'Passed in Test', 'R4R in Pre-Prod', 'Additional Fix Rquired', 'Ready for Closure', 'Closed','Deferred', 'Rejected'],
+			datasets: [{
+				label: '# of Votes',
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				backgroundColor: [
+					'rgba(217, 217, 217, 1)',
+					'rgba(68, 114, 196, 1)',
+					'rgba(255, 255, 0, 1)',
+					'rgba(91, 155, 213, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(165, 165, 165, 1)',
+					'rgba(84, 130, 53, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(56, 87, 35, 1)',
+					'rgba(112, 48, 160,1)'
+					],
+
+					borderColor: [
+					'rgba(217, 217, 217, 1)',
+					'rgba(68, 114, 196, 1)',
+					'rgba(255, 255, 0, 1)',
+					'rgba(91, 155, 213, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(165, 165, 165, 1)',
+					'rgba(84, 130, 53, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(56, 87, 35, 1)',
+					'rgba(112, 48, 160,1)'
+					],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			},
+			legend: {
+				display: false
+			}
+		}
+	})
+</script>
+
+
+<!-- User Acceptance Test Execution Status Chart --> 
+	<!-- User Acceptance Test Execution Prograss Pie Chart --> 
+ <script>
+	var ctx = document.getElementById('myChartUATExec');
+	var myChart = new Chart(ctx, {
+	  type: 'pie',
+	  data: {
+        labels: ['Pass', 'No Run'],
+        datasets: [{
+           
+            data: [10,0],
+			backgroundColor: ['rgba(0,245,0,1)', 'rgba(138,0,176,1.2)'],
+ 
+        }]
+    },
+			options: {
+            
+            legend: {
+                display: false,
+                 labels: {
+                      fontColor: 'rgba(255, 99, 132)'
+                 }
+                 }
+             }	
+  
+	})
+</script> 
+ 
+ 
+<!-- User Acceptance Test Execution Status Bar Chart --> 
+ <script>      
+
+  var ctx = document.getElementById('uatexecutionstatusChart');
+  
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Passed',
+        'Failed',
+        'Blocked',
+        'N/A',
+        'Not Completed',
+        'No Run',
+        'Deferred'
+      ],
+      datasets: [{
+		data:  [
+          36,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        lineTension: 0,
+        backgroundColor: ['rgba(0, 255, 0, 1)',
+					'rgba(255, 0, 0, 1)',
+					'rgba(169, 169, 169, 1)',
+					'rgba(145, 114, 0, 1)',
+					'rgba(195, 73, 0, 1)',
+					'rgba(19, 120, 181, 1)',
+					'rgba(255, 163, 0, 1)'
+					],
+		borderColor: ['rgba(0, 255, 0, 1)',
+					'rgba(255, 0, 0, 1)',
+					'rgba(169, 169, 169, 1)',
+					'rgba(145, 114, 0, 1)',
+					'rgba(195, 73, 0, 1)',
+					'rgba(19, 120, 181, 1)',
+					'rgba(255, 163, 0, 1)'
+					
+					],
+        borderWidth: 1,
+        pointBackgroundColor: '#0066FF'
+      },
+	  //Pass line
+
+
+	  ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+	
+  })
+ </script>
+
+<!-- User Acceptance Test Execution Trend graph -->
+ <script>      
+  // Graphs
+  var ctx = document.getElementById('UATtrendChart')
+  
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        '31 Aug',
+        '01 Sep',
+        '02 Sep',
+        '03 Sep',
+        '04 Sep',
+		'07 Sep',
+		'08 Sep',
+		'09 Sep',
+		'10 Sep',
+		'11 Sep',
+		'14 Sep',
+		'15 Sep',
+		'16 Sep',
+		'17 Sep',
+		'18 Sep'
+		
+      ],
+      datasets: [{
+// Planned line      
+	  data: [ 2, 5, 7, 10, 12, 14, 17, 19, 22, 24, 26, 29, 31, 34, 36 ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#6699FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#6699FF'
+      },
+	  // Executed line
+	  {
+        data: [0, 6, 9, 9, 9, 15, 16, 16, 16, 26, 26, 29, 32, 36    ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#0066FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#0066FF'
+      },
+	  //Pass line
+	  {
+        data: [0, 6, 9, 9, 9, 15, 16, 16, 16, 26, 26, 29, 32, 36    ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#33CC00',
+        borderWidth: 2,
+        pointBackgroundColor: '#33CC00'
+      },
+	  // Fail line
+	  {
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0   ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#FF0000',
+        borderWidth: 2,
+        pointBackgroundColor: '#FF0000'
+      }
+	  ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+  })
+ </script>
+ 
+<!-- User Acceptance Test Execution Defect graph --> 
+ <script>
+	var ctx = document.getElementById('UATdefectChart');
+	var myChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: ['New', 'Assigned to Fix', 'In-Progress', 'Feedback Required', 'R4R in Dev', 'Passed in Dev', 'R4R in Test', 'Passed in Test', 'R4R in Pre-Prod', 'Additional Fix Rquired', 'Ready for Closure', 'Closed','Deferred', 'Rejected'],
+			datasets: [{
+				label: '# of Votes',
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				backgroundColor: [
+					'rgba(217, 217, 217, 1)',
+					'rgba(68, 114, 196, 1)',
+					'rgba(255, 255, 0, 1)',
+					'rgba(91, 155, 213, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(165, 165, 165, 1)',
+					'rgba(84, 130, 53, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(56, 87, 35, 1)',
+					'rgba(112, 48, 160,1)'
+					],
+
+					borderColor: [
+					'rgba(217, 217, 217, 1)',
+					'rgba(68, 114, 196, 1)',
+					'rgba(255, 255, 0, 1)',
+					'rgba(91, 155, 213, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(165, 165, 165, 1)',
+					'rgba(84, 130, 53, 1)',
+					'rgba(102, 153, 0, 1)',
+					'rgba(0, 176, 80, 1)',
+					'rgba(56, 87, 35, 1)',
+					'rgba(112, 48, 160,1)'
+					],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			},
+			legend: {
+				display: false
+			}
+		}
+	})
+</script>
+
+<!-- Display Test Phase time Lines --> 
+   <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = new google.visualization.DataTable();
+            
+            data.addColumn({ 
+               type: 'string', id: 'President'
+            });
+            
+            data.addColumn({ 
+               type: 'date', id: 'Start' 
+            });
+            
+            data.addColumn({ 
+               type: 'date', id: 'End'
+            });
+            
+            data.addRows([
+               [ 'Test Planning', new Date(2020, 5, 24), new Date(2020, 7, 7) ],
+               [ 'Systm Test Preparation',      new Date(2020, 6, 27),  new Date(2020, 7, 07) ],			
+               [ 'System Integration Test Preparation',  new Date(2020, 7, 10),  new Date(2020, 7, 21) ],
+			   [ 'System Test Execution',  new Date(2020, 7, 10),  new Date(2020, 7, 21) ],
+			   [ 'System Integration Test Execution',  new Date(2020, 7, 24),  new Date(2020, 7, 28) ],
+			   [ 'User Acceptance Test Preparation',  new Date(2020, 7, 24),  new Date(2020, 7, 28) ],
+			   [ 'User Acceptance Test Execution',  new Date(2020, 7, 31),  new Date(2020, 8, 11) ],
+			   [ 'Contingency Week',  new Date(2020, 8, 14),  new Date(2020, 8, 18) ],
+			   [ 'Go-Live & Hyper Care',  new Date(2020, 8, 21),  new Date(2020, 9, 16) ]
+			   
+            ]);
+
+            var options = {      
+               width: '100%', 
+               height: '100%',
+               colors: ['#6EB009', '#011049', '#01E1F7', '#011049', '#01E1F7', '#9C0DC6', '#9C0DC6', '#FFC300', '#9B1105' ]
+            };
+                  
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.Timeline(document.getElementById('timeline'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+
+</body>  
+</html>

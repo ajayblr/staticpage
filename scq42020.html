@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    EI SAP Landscape Test Dashboard
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+
+   <script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
+
+      <script type = "text/javascript">
+
+         google.charts.load('current', {packages: ['timeline']});    
+
+  </script>
+     
+</head>
+
+<body class="">
+<div class="container">
+ <!-- Navigation bar start -->
+<nav class="navbar navbar-expand-lg navbar-expand-md bg-primary">
+
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+		       <li class="nav-item">
+					<a class="navbar-brand" href="index.html">Home</a>
+			   </li>
+			   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-bar navbar-kebab"></span>
+				<span class="navbar-toggler-bar navbar-kebab"></span>
+				<span class="navbar-toggler-bar navbar-kebab"></span>
+			  </button>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="scq42020.html">Small Changes Q4-2020</a>
+					<a class="dropdown-item" href="scq32020.html#">Small Changes Q3-2020</a>
+					<a class="dropdown-item" href="#">Small Changes Q2-2020</a>
+					<a class="dropdown-item" href="#">Small Changes Q1-2020</a>
+                <div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">BizTalk Definition</a>
+                </div>
+              </li>
+			  <li class="nav-item">
+					<a class="navbar-brand" href="http://ei.esb.ie/projects/eisap/2018%20Unicode%20Upgrades/EI%20SAP%20Development%20Project%20Test%20Strategy.docx?web=1">Test Strategy</a>
+			   </li>
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Test Plan
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="http://ei.esb.ie/projects/eisap/Small%20Changes%20Q4%202020/Test%20Management/Small%20Changes%20Q4%20-%202020%20System%20Test%20Plan.docx?web=1">System Test Plan</a>
+					<a class="dropdown-item" href="http://ei.esb.ie/projects/eisap/Small%20Changes%20Q4%202020/Test%20Management/Small%20Changes%20Q4%20-%202020%20System%20Integration%20Test%20Plan.docx?web=1">System Integration Test Plan</a>
+					<a class="dropdown-item" href="http://ei.esb.ie/projects/eisap/Small%20Changes%20Q4%202020/Test%20Management/Small%20Changes%20Q4%20-%202020%20User%20Acceptance%20Test%20Plan.docx?web=1">User Acceptance Test Plan</a>
+                </div>
+              </li>
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Exit Report
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="http://ei.esb.ie/projects/eisap/Small%20Changes%20Q4%202020/Test%20Management/Small%20Changes%20Q4-2020%20System%20Test%20Exit%20Report.docx?web=1">System Test Exit Report</a>
+					<a class="dropdown-item" href="http://ei.esb.ie/projects/eisap/Small%20Changes%20Q4%202020/Test%20Management/Small%20Changes%20Q4-2020%20System%20Integration%20Test%20Exit%20Report.docx?web=1">System Integration Test Exit Report</a>
+					<!--a class="dropdown-item" href="#">User Acceptance Test Exit Report</a-->
+                </div>
+              </li>			  
+			   
+
+        </div>
+        <!-- Navbar Right Side -->
+        <div class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="material-icons">notifications</i>
+                      <span class="notification">1</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+
+                          <a class="dropdown-item" href="#">UAT Execution in Progress</a>
+
+
+                    </div>
+                  </li>
+
+        </div>
+      </div>
+    
+</nav>
+</div>
+      <div class="content">
+        <div class="container">
+		<br>
+		<!-- display the Project time lines -->
+		<h3 class="d-none d-sm-table-cell">Small Changes Q4-2020 Test Schedule</h3>
+
+		<table class="table">
+            <tbody>
+                <tr>
+					<td  scope="col" class="d-none d-sm-table-cell" >
+						<div class="container-fluid" id = 'timeline' style = "height: 425px; margin: 0 auto">
+						</div>
+					</td>
+				</tr>
+			<tbody>
+		</table>
+		<!-- display the Project time lines -->
+		
+	
+		
+		
+		
+		<h3 class="card-title">Work Request Status</h3>
+		<!-- display Work Request Develoipment Status -->
+	     <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+					<i class="material-icons">event_availab</i> 
+                  </div>
+                  <p class="card-category">Development</p>
+                  <h3 class="card-title">0/5</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+					<i class="material-icons">date_range</i> 9 October 2020 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">assignment_turned_in</i>
+                  </div>
+                  <p class="card-category">Completed</p>
+                  <h3 class="card-title">5/5</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">date_range</i> 9 October 2020 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">info_outline</i>
+                  </div>
+                  <p class="card-category">Unit Test</p>
+                  <h3 class="card-title">0/5</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                     <i class="material-icons">date_range</i> 9 October 2020 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+			  <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                   <i class="material-icons">assignment_turned_in</i>
+                  </div>
+                  <p class="card-category">Test Complete</p>
+                  <h3 class="card-title">5/5</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                     <i class="material-icons">date_range</i> 9 October 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+		<!-- display Work Request Development Status -->
+		<h3 class="card-title">Test Preparation</h3>
+		<!-- Test Preparation Progress updates begin-->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card card-chart">
+                <div class="card-header card-header-success">
+                  <div class="ct-chart">
+					<canvas id="myChartSTPrep"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Test Preparation</h4>
+                  <p class="card-category">Completed</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span> Complete</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 16 October 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-chart">
+                <div class="card-header card-header-info">
+                  <div class="ct-chart">
+					<canvas id="myChartSITPrep"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Integration Test Preparation</h4>
+                  <p class="card-category">Completed</p>
+				   <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span> Complete</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 30 October 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <div class="ct-chart">
+					<canvas id="myChartUATPrep"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">User Acceptance Test Preparation</h4>
+                  <p class="card-category">Test Preparation In-Progress</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span> Complete</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i>06 November 2020
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+		<!-- Test Preparation Progress updates Ends-->
+		<h3 class="card-title">System Test</h3>		
+		<!-- System Test Execution Progress updates Begins -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-success">
+                  <div class="ct-chart">
+					<canvas id="stexecutionstatusChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Test Execution</h4>
+                  <p class="card-category">Testing complete</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span></p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 30 October 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-success">
+                  <div class="ct-chart">
+					<canvas id="myChartSTExec"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Test Execution</h4>
+                  <p class="card-category">Testing complete</p>
+				   <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span> </p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 30 October 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>		
+		<!-- System Test Execution Progress updates Ends -->
+
+		<!-- System Test Execution Trend and Defects Progress updates Begins -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-success">
+                  <div class="ct-chart">
+					<canvas id="STtrendChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Test Execution Trend</h4>
+                  <p class="card-category">Execution Trend - Normal</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span> Complete</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i>30 October 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-success">
+                  <div class="ct-chart">
+					<canvas id="STdefectChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Test Defects</h4>
+                  <p class="card-category">0 Defect identified during System Test</p>
+				   <span class="text-success"><!--i class="fa fa-long-arrow-up"--></i>-</span> </p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 30 October 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>	
+
+<!-- Display System Test Execution Defects & Work Request progress-->		  
+		 <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-success">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <span class="nav-tabs-title">Test Progress:</span>
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+						<li class="nav-item">
+                          <a class="nav-link active" href="#stdefect" data-toggle="tab">
+                            <i class="material-icons">bug_report</i> Test Defects
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>					  
+                        <li class="nav-item">
+                          <a class="nav-link" href="#stprogress" data-toggle="tab">
+                            <i class="material-icons">insights</i> Execution Status
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+				
+                <div class="card-body">
+                  <div class="tab-content">
+				  
+                   <div class="tab-pane active" id="stdefect">
+					<h4 class="card-title">System Integration Test Defects</h4>
+                      <table class="table">
+					  	<thead class="text-success">
+							<th>#</th>
+                            <th>Defect Id</th>
+                            <th>Defect Description</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Detected By</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Assigned to</th>
+                        </thead>
+                        <tbody>
+							<tr>
+
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+					
+                    <div class="tab-pane" id="stprogress">
+					<h4 class="card-title">Test Case Status</h4>
+					<table class="table table-hover">
+						<thead class="text-success">
+							<th>#</th>
+							<th>Work Request Scenario</th>
+							<th>Status</th>
+							<th>Planned</th>
+							<th>Executed</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Blocked</th>
+							<th>N/A</th>
+							<th>Not Completed</th>
+							<th>No Run</th>
+							<th>Deferred</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+								<td>1</td>
+								<td>WR79821 - IRP -Closed accounts  mass write off process</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>4</td>
+								<td>4</td>
+								<td>4</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+                            </tr>
+                            <tr>
+								<td>2</td>
+								<td>WR79831 - SRP EQ Payment holiday-review of monthly instalment</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>5</td>
+								<td>5</td>
+								<td>5</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+                            </tr>
+							<tr>
+								<td>3</td>
+								<td>WR79844 - Pre-Registdation Analysis</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>4</td>
+								<td>4</td>
+								<td>4</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>WR79852 - GNI Eircode's - Additional Change</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>33</td>
+								<td>33</td>
+								<td>33</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>WR79854 -CRP Reduce Repeat Contacts</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>38</td>
+								<td>38</td>
+								<td>38</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td><b>Total:</b></td>
+								<td><b>84</b></td>
+								<td><b>84</b></td>
+								<td><b>84</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>								
+							</tr>
+
+                        </tbody>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  </div>
+<!-- Display System Test Execution Defects & Work Request progress-->		  
+
+		  
+		<!-- System Integration Test Execution Progress updates Ends -->		
+		<h3 class="card-title">System Integration Test</h3>
+				<!-- System Integration Test Execution Trend and Defects Progress updates Begins -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-info">
+                  <div class="ct-chart">
+					<canvas id="sitexecutionstatusChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Integration Test Execution</h4>
+                  <p class="card-category">Testing Complete</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span> </p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 6 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-info">
+                  <div class="ct-chart">
+					<canvas id="myChartSITExec"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Integration Test Execution Status</h4>
+                  <p class="card-category">Testing Complete</p>
+				   <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span></p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 6 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+ 
+          </div>		
+		<!-- System Integration Test Execution Progress updates Ends -->	
+
+
+		<!-- System Integration Test Execution Trend and Defects Progress updates starts -->		
+		
+				<!-- System Integration Test Execution Trend and Defects Progress updates Begins -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-info">
+                  <div class="ct-chart">
+					<canvas id="SITtrendChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Integration Test Execution</h4>
+                  <p class="card-category">Execution Trend - Normal</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 100% </span> Comnplete</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 6 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-info">
+                  <div class="ct-chart">
+					<canvas id="SITdefectChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">System Integration Test Defects</h4>
+                  <p class="card-category">0 Defects identified</p>
+				   <span class="text-success"><i class="fa fa-long-arrow-up"></i> - </span> </p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> 6 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+ 
+          </div>		
+		  
+<!-- Display System Integration Test Execution Defects & Work Request progress-->		  
+		 <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-info">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <span class="nav-tabs-title">Test Progress:</span>
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+						<li class="nav-item">
+                          <a class="nav-link active" href="#sitdefect" data-toggle="tab">
+                            <i class="material-icons">bug_report</i> Test Defects
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>					  
+                        <li class="nav-item">
+                          <a class="nav-link" href="#sitprogress" data-toggle="tab">
+                            <i class="material-icons">insights</i> Execution Status
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+				
+                <div class="card-body">
+                  <div class="tab-content">
+				  
+                   <div class="tab-pane active" id="sitdefect">
+					<h4 class="card-title">System Integration Test Defects</h4>
+                      <table class="table">
+					  	<thead class="text-info">
+							<th>#</th>
+                            <th>Defect Id</th>
+                            <th>Defect Description</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Detected By</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Assigned to</th>
+                        </thead>
+                        <tbody>
+							<tr>
+
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+					
+                    <div class="tab-pane" id="sitprogress">
+						<h4 class="card-title">Test Case Status</h4>						
+							<!--button type="button" class="btn btn-info">
+								Work Request remaining to be tested <span class="badge badge-default">2</span>
+							</button-->
+						
+					<table class="table table-hover">
+						<thead class="text-info">
+							<th>#</th>
+							<th>Work Request Scenario</th>
+							<th>Status</th>
+							<th>Planned</th>
+							<th>Executed</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Blocked</th>
+							<th>N/A</th>
+							<th>Not Completed</th>
+							<th>No Run</th>
+							<th>Deferred</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+								<td>1</td>
+								<td>WR79821 - IRP -Closed accounts  mass write off process</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+                            </tr>
+                            <tr>
+								<td>2</td>
+								<td>WR79831 - SRP EQ Payment holiday-review of monthly instalment</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>2</td>
+								<td>2</td>
+								<td>2</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+                            </tr>
+							<tr>
+								<td>3</td>
+								<td>WR79844 - Pre-Registdation Analysis</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>4</td>
+								<td>4</td>
+								<td>4</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>WR79852 - GNI Eircode's - Additional Change</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>19</td>
+								<td>19</td>
+								<td>19</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>WR79854 -CRP Reduce Repeat Contacts</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>38</td>
+								<td>38</td>
+								<td>38</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td><b>Total:</b></td>
+								<td><b>64</b></td>
+								<td><b>45</b></td>
+								<td><b>45</b></td>
+								<td><b>64</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+							</tr>							
+                        </tbody>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  </div>
+<!-- Display System Integration Test Execution Defects & Work Request progress-->		  
+
+		  
+		  
+		  
+		  
+		  
+		<!-- System Integration Test Execution Trend and Defects Progress updates Ends -->	
+	
+		<h3 class="card-title">User Acceptance Test</h3>
+		<!-- System Integration Test Execution Trend and Defects Progress updates Begins -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <div class="ct-chart">
+					<canvas id="uatexecutionstatusChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">User Acceptance Test Execution</h4>
+                  <p class="card-category">Testing Complete</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i>100%</span></p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i>20 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <div class="ct-chart">
+					<canvas id="myChartUATExec"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">User Acceptance Test Execution Status</h4>
+                  <p class="card-category">Testing Complete</p>
+				   <span class="text-success"><i class="fa fa-long-arrow-up"></i>100%</span></p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i>20 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+ 
+          </div>		
+		<!-- User Acceptance Test Execution Progress updates Ends -->	
+	
+		<!-- User Acceptance Test Execution Trend and Defects Progress updates Begins -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <div class="ct-chart">
+					<canvas id="UATtrendChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">User Acceptance Execution Trend</h4>
+                  <p class="card-category">Execution Trend - Normal</p>
+				  <span class="text-success"><i class="fa fa-long-arrow-up"></i>100% Complete </span>.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i>20 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <div class="ct-chart">
+					<canvas id="UATdefectChart"></canvas>
+				  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">User Acceptance Test Defects</h4>
+                  <p class="card-category"> 0 Defects Identified</p>
+				   <span class="text-success"><i class="fa fa-long-arrow-up"></i> </span> </p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i>20 November 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>		
+		<!-- User Acceptance Test Execution Trend and Defects Progress updates Ends -->	
+		  <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-warning">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <span class="nav-tabs-title">Test Progress:</span>
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#uatdefect" data-toggle="tab">
+                            <i class="material-icons">bug_report</i> Test Defects
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#uatprogress" data-toggle="tab">
+                            <i class="material-icons">insights</i> Execution Status
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="uatdefect">
+					<h4 class="card-title">User Acceptance Test Defects</h4>
+					<table class="table table-hover">
+						<thead class="text-warning">
+							<th>#</th>
+                            <th>Defect Id</th>
+                            <th>Defect Description</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Detected By</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Assigned to</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+  
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="tab-pane" id="uatprogress">
+					<h4 class="card-title">Test Cases Status</h4>
+                      <table class="table">
+						<thead class="text-warning">
+							<th>#</th>
+							<th>Work Request Scenario</th>
+							<th>Status</th>
+							<th>Planned</th>
+							<th>Executed</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Blocked</th>
+							<th>N/A</th>
+							<th>Not Completed</th>
+							<th>No Run</th>
+							<th>Deferred</th>
+						</thead>
+                        <tbody>
+                          <tr>
+								<td>1</td>
+								<td>WR79821 - IRP -Closed accounts  mass write off process</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>15</td>
+								<td>15</td>
+								<td><span class="badge badge-success">15</span></td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+                            </tr>
+                            <tr>
+								<td>2</td>
+								<td>WR79831 - SRP EQ Payment holiday-review of monthly instalment</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>16</td>
+								<td>15</td>
+								</td><td><span class="badge badge-success">15</span></td>
+								<td>0</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+                            </tr>
+							<tr>
+								<td>3</td>
+								<td>WR79844 - Pre-Registdation Analysis</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>3</td>
+								<td>3</td>
+								<td><span class="badge badge-success">3</span></td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>WR79852 - GNI Eircode's - Additional Change</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>8</td>
+								<td>8</td>
+								<td><span class="badge badge-success">8</span></td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>WR79854 -CRP Reduce Repeat Contacts</td>
+								<td><span class="badge badge-success">Passed</span></td>
+								<td>6</td>
+								<td>6</td>
+								<td><span class="badge badge-success">6</span></td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td><b>Total:</b></td>
+								<td><b>48</b></td>
+								<td><b>47</b></td>
+								<td><b>47</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>1</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+								<td><b>0</b></td>
+							</tr>	
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  </div>
+
+		<!-- display Work Request -->
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Work Request in Scope</h4>
+                  <p class="card-category">Small Changes Q4-2020</p>
+                </div>
+                <div class="card-body table-responsive">
+                    <table class="table table-hover">
+						<thead class="text-primary">
+							<th>#</th>
+                            <th>Work Request</th>
+                            <th>Description</th>
+                            <th>System</th>
+                            <th>QC Item</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Business Analyst</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Functional Team</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Business Tester</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>79821</td>
+                                <td>IRP -Closed accounts  mass write off processNI Residential & NI  I & C</td>
+                                <td>IRP</td>
+                                <td>27825</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Martina McGrath</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Pablo Barbero</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Martin Carty</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>79831</td>
+                                <td>SRP: EQ Payment holiday-review of monthly instalment</td>
+                                <td>SRP</td>
+                                <td>27826</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Martina McGrath</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Pablo Barbero</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Patricia Robinson</td>
+                            </tr>
+                            <tr>
+								<td>3</td>
+                                <td>79852</td>
+                                <td>GNI Eircode's - Additional Change</td>
+                                <td>SRP</td>
+                                <td>27771</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Desmond McBride</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Joao Ferreria</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Susan McGuinness</td>
+                            </tr>                                                                                                    
+                            <tr>
+                                <td>4</td>
+                                <td>79844</td>
+                                <td>IRP: Pre-Registration Switch Creation Process</td>
+                                <td>IRP</td>
+                                <td>27978</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Ciaran McCallion</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Joao Ferreria</td>
+                                <td scope="col" class="d-none d-sm-table-cell">William Nellins</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>79854</td>
+                                <td>CRP: Reduce Repeat Contacts</td>
+                                <td>CRP</td>
+                                <td>27804</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Karen Daly</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Syed Ali</td>
+                                <td scope="col" class="d-none d-sm-table-cell">Trevor Slattery</td>
+                            </tr>                                                                                                    
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+		  </div>
+		<!-- display Work Request -->
+
+       </div>
+      </div>
+	  </Div>
+    <!--div-->
+
+      <footer class="footer">
+
+      </footer>
+    </div>
+  </div>
+
+
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+
+  <!-- Library for adding dinamically elements -->
+  <script src="assets/js/plugins/arrive.min.js"></script>
+  
+  <!--  Notifications Plugin    -->
+  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  
+
+  
+  <!-- my scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <!-- Preparation Chart will be displayed from here-->
+
+<!-- ST Preparation Status Chart -->
+<!-- ST Preparation Status Chart -->
+
+ <script>
+
+         var ctx = document.getElementById("myChartSTPrep");
+         var myChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Completed', 'In-Progress'],
+                    datasets: [{
+                        data: [5,0],
+                       backgroundColor: ['rgba(0,245,0,1)', 'rgba(31, 73, 125, 1.2)']
+                    }]
+                },
+                options: {
+                    title: {
+                        display: false,
+                        text: 'System Test Preparation'
+                    },
+                    legend: {
+                        display: false,
+                        labels: {
+                                 fontColor: 'rgba(255, 99, 132)'
+                        }
+                    }
+                }
+            })
+</script>
+
+<!-- SIT Preparation Status Chart -->
+
+ <script>
+        var ctx = document.getElementById('myChartSITPrep');
+        var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+				labels: ['Completed', 'In-Progress'],
+				datasets: [{
+                data: [5,0],
+                backgroundColor: ['rgba(0,245,0,1)', 'rgba(24,164,254,1)']
+                    }]
+                },
+				
+				options: {
+					title: {
+					display: false,
+					text: 'System Test Preparation'
+					},
+				legend: {
+                display: false,
+				labels: {
+	                fontColor: 'rgba(255, 99, 132)'
+
+					}
+                }
+           }
+    })
+
+</script>
+
+ 
+<!-- UAT Preparation Status Chart -->
+
+ <script>
+
+        var ctx = document.getElementById('myChartUATPrep');
+        var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+				labels: ['Completed', 'In-Progress'],
+                datasets: [{
+                    data: [5,0],
+                    backgroundColor: ['rgba(0,245,0,1)', 'rgba(138,0,176,1.2)']
+                        }]
+                },
+                options: {
+					title: {
+					display: false,
+					text: 'User Acceptance Test Preparation'
+					},
+					legend: {
+					display: false,
+		            labels: {
+                    fontColor: 'rgba(255, 99, 132)'
+						}
+
+					}
+				}               
+		})
+
+</script>
+
+<!-- Preparation Chart display ends here-->
+
+<!-- ST Graphs will be displayed from here -->
+
+<!-- System Test Execution progress Pie Chart -->
+
+ <script>
+        var ctx = document.getElementById('myChartSTExec');
+        var myChart = new Chart(ctx, {
+        type: 'pie',
+            data: {
+			labels: ['Pass', 'No Run'],
+			datasets: [{
+            data: [84,0],
+            backgroundColor: ['rgba(0,245,0,1)', 'rgba(31, 73, 125, 1.2)'],
+			}]
+		},
+        options: {
+        legend: {
+        display: false,
+        is3D:true,
+        labels: {
+        fontColor: 'rgba(255, 99, 132)'
+                 }
+            }
+
+           }
+        })
+</script>
+
+<!-- System Test Execution Status Bar Chart -->
+ <script>     
+	var ctx = document.getElementById('stexecutionstatusChart');
+	var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Passed',
+        'Failed',
+        'Blocked',
+        'N/A',
+        'Not Completed',
+        'No Run',
+        'Deferred'
+      ],
+
+      datasets: [{
+                data:  [
+					84, 0, 0, 0, 0, 0, 0
+					],
+        lineTension: 0,
+        backgroundColor: ['rgba(0, 255, 0, 1)',
+                          'rgba(255, 0, 0, 1)',
+                          'rgba(169, 169, 169, 1)',
+                          'rgba(145, 114, 0, 1)',
+                          'rgba(195, 73, 0, 1)',
+                          'rgba(19, 120, 181, 1)',
+                          'rgba(255, 163, 0, 1)'
+                        ],
+        borderColor: ['rgba(0, 255, 0, 1)',
+						  'rgba(255, 0, 0, 1)',
+                          'rgba(169, 169, 169, 1)',
+                          'rgba(145, 114, 0, 1)',
+                          'rgba(195, 73, 0, 1)',
+                          'rgba(19, 120, 181, 1)',
+                          'rgba(255, 163, 0, 1)'
+                    ],
+        borderWidth: 1,
+        pointBackgroundColor: '#0066FF'
+	
+      },
+      //Pass line
+            ]
+    },
+
+    options: {
+    scales: {
+    yAxes: [{
+    ticks: {
+    beginAtZero: true
+          }
+        }]
+      },
+    legend: {
+        display: false
+      }
+	  
+    }
+	
+
+  })
+
+</script>
+
+<!-- 3D System Test Execution Status Pie Chart -->
+
+ <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Status');
+            data.addColumn('number', 'Percentage');
+            data.addRows([
+               ['Pass', 59],
+               ['Not Run',19]
+            ]);
+
+            // Set chart options
+            var options = {
+              // 'title':'Browser market shares at a specific website, 2014',
+              'width':500,
+              'height':450,
+              'colors': ['#6EB009', '#011049'],
+              legend: 'none', //hide the legend
+              is3D:true
+            };
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.PieChart(document.getElementById('3dchart'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+ 
+
+<!-- System Test Execution Trend graph -->
+<script>     
+  // Graphs
+  var ctx = document.getElementById('STtrendChart')
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        '19 Oct',
+        '20 Oct',
+        '21 Oct',
+        '22 Oct',
+        '23 Oct',
+        '26 Oct',
+        '27 Oct',
+        '28 Oct',
+        '29 Oct',
+        '30 Oct'
+      ],
+      datasets: [{
+	// Planned line     	
+		data: [ 8, 15, 23, 30 , 38 , 46 , 53, 61, 68, 84],
+		label: 'Planned',
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#6699FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#6699FF'
+      },
+        // Executed line
+        {
+        data: [0, 0, 0, 5, 5, 30, 40,47 ,48 ,84],
+		label: 'Executed',
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#0066FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#0066FF'
+      },
+       //Pass line
+        {
+        data: [0, 0, 0, 5, 5, 28, 40 ,47 ,48 ,84   ],
+		label: 'Pass',
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#33CC00',
+        borderWidth: 2,
+        pointBackgroundColor: '#33CC00'
+      },
+       // Fail line
+        {
+        data: [0,0,0,0,0,0,0,0, 0,   0   ],
+		label: 'Fail',
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#FF0000',
+        borderWidth: 2,
+        pointBackgroundColor: '#FF0000'
+      }
+      ]
+    },
+    options: {
+		scales: {
+		yAxes: [{
+		ticks: {
+		beginAtZero: true
+			}
+			}]
+		},
+       legend: {
+			display: true
+      }
+    }
+
+  })
+
+</script>
+
+<!-- System Test Defect graph -->
+ <script>
+    var ctx = document.getElementById('STdefectChart');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+    labels: ['New', 'Assigned to Fix', 'In-Progress', 'Feedback Required', 'R4R in Dev', 'Passed in Dev', 'R4R in Test', 'Passed in Test', 'R4R in Pre-Prod', 'Additional Fix Rquired', 'Ready for Closure', 'Closed','Deferred', 'Rejected'],
+    datasets: [{
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        backgroundColor: [
+				'rgba(217, 217, 217, 1)',
+                'rgba(68, 114, 196, 1)',
+                'rgba(255, 255, 0, 1)',
+                'rgba(91, 155, 213, 1)',
+                'rgba(102, 153, 0, 1)',
+                'rgba(0, 176, 80, 1)',
+                'rgba(102, 153, 0, 1)',
+                'rgba(0, 176, 80, 1)',
+                'rgba(165, 165, 165, 1)',
+                'rgba(84, 130, 53, 1)',
+                'rgba(102, 153, 0, 1)',
+                'rgba(0, 176, 80, 1)',
+                'rgba(56, 87, 35, 1)',
+                'rgba(112, 48, 160,1)'
+            ],
+        borderColor: [
+                'rgba(217, 217, 217, 1)',
+                'rgba(68, 114, 196, 1)',
+                'rgba(255, 255, 0, 1)',
+                'rgba(91, 155, 213, 1)',
+                'rgba(102, 153, 0, 1)',
+                'rgba(0, 176, 80, 1)',
+                'rgba(102, 153, 0, 1)',
+                'rgba(0, 176, 80, 1)',
+                'rgba(165, 165, 165, 1)',
+                'rgba(84, 130, 53, 1)',
+                'rgba(102, 153, 0, 1)',
+                'rgba(0, 176, 80, 1)',
+                'rgba(56, 87, 35, 1)',
+                'rgba(112, 48, 160,1)'
+            ],
+        borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                ticks: {
+                beginAtZero: true
+                    }
+                }]
+            },
+        legend: {
+            display: false
+                }
+        }
+    })
+
+</script>
+
+
+<!-- System Integration Test Execution Status Chart -->
+
+<!-- System Integration Test Execution Prograss Pie Chart -->
+ <script>
+    var ctx = document.getElementById('myChartSITExec');
+    var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+    labels: ['Pass', 'No Run'],
+    datasets: [{
+    data: [64, 0],
+    backgroundColor: ['rgba(0,245,0,1)', 'rgba(24,164,254,1)'],
+			}]
+	},
+    options: {
+		legend: {
+			display: false,
+				labels: {
+				fontColor: 'rgba(255, 99, 132)'
+					}
+				}	
+            }
+    })
+
+</script>
+
+
+<!-- System Integration Test Execution Status Bar Chart -->
+
+ <script>     
+	var ctx = document.getElementById('sitexecutionstatusChart');
+	var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Passed',
+        'Failed',
+        'Blocked',
+        'N/A',
+        'Not Completed',
+        'No Run',
+        'Deferred'
+		],
+
+      datasets: [{
+                data:  [
+						64, 0, 0, 0, 0, 0, 0 ],
+				lineTension: 0,
+				backgroundColor: ['rgba(0, 255, 0, 1)',
+                                  'rgba(255, 0, 0, 1)',
+                                  'rgba(169, 169, 169, 1)',
+                                  'rgba(145, 114, 0, 1)',
+                                  'rgba(195, 73, 0, 1)',
+                                  'rgba(19, 120, 181, 1)',
+                                  'rgba(255, 163, 0, 1)'
+                                 ],
+                borderColor: ['rgba(0, 255, 0, 1)',
+                                  'rgba(255, 0, 0, 1)',
+                                  'rgba(169, 169, 169, 1)',
+                                  'rgba(145, 114, 0, 1)',
+                                  'rgba(195, 73, 0, 1)',
+                                  'rgba(19, 120, 181, 1)',
+                                  'rgba(255, 163, 0, 1)'
+                            ],
+				borderWidth: 1,
+				pointBackgroundColor: '#0066FF'
+				},]
+
+		},
+		options: {
+			scales: {
+			yAxes: [{
+			ticks: 	{
+						beginAtZero: true
+					}
+					}]
+				},
+		legend: {
+			display: false
+				}
+    }
+  })
+
+</script>
+
+
+<!-- System Integration Test Execution Trend graph -->
+
+<script>     
+
+  // Graphs
+  var ctx = document.getElementById('SITtrendChart')
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        '02 Nov',
+        '03 Nov',
+        '04 Nov',
+        '05 Nov',
+        '06 Nov'
+      ],
+      datasets: [{
+// Planned line   
+				label: 'Planned', 
+				data: [ 13, 26, 39, 52 , 64 ],
+				lineTension: 0,
+				backgroundColor: 'transparent',
+				borderColor: '#6699FF',
+				borderWidth: 2,
+				pointBackgroundColor: '#6699FF'
+				},
+ // Executed line
+                  {
+				label: 'Executed',
+				data: [23,41 ,41, 41, 64],
+				lineTension: 0,
+				backgroundColor: 'transparent',
+				borderColor: '#0066FF',
+				borderWidth: 2,
+				pointBackgroundColor: '#0066FF'
+				},
+
+ //Pass line
+                {
+				label: 'Pass',
+				data: [23, 41,41 , 41 ,  64  ],
+				lineTension: 0,
+				backgroundColor: 'transparent',
+				borderColor: '#33CC00',
+				borderWidth: 2,
+				pointBackgroundColor: '#33CC00'
+				},
+
+// Fail line
+                {
+				label: 'Fail',
+				data: [ 0, 0, 0, 0, 0  ],
+				lineTension: 0,
+				backgroundColor: 'transparent',
+				borderColor: '#FF0000',
+				borderWidth: 2,
+				pointBackgroundColor: '#FF0000'
+				}
+
+                ]
+    },
+
+    options: {
+		scales: {
+			yAxes: [{
+			ticks: {
+				beginAtZero: true
+				}
+	        }]
+      },
+
+      legend: {
+		display: true
+      }
+    }
+  })
+
+</script>
+
+<!-- System Test Execution Defect graph -->
+
+ <script>
+
+    var ctx = document.getElementById('SITdefectChart');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['New', 'Assigned to Fix', 'In-Progress', 'Feedback Required', 'R4R in Dev', 'Passed in Dev', 'R4R in Test', 'Passed in Test', 'R4R in Pre-Prod', 'Additional Fix Rquired', 'Ready for Closure', 'Closed','Deferred', 'Rejected'],
+
+        datasets: [{
+			label: '# of Votes',
+			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            backgroundColor: [
+								'rgba(217, 217, 217, 1)',
+                                'rgba(68, 114, 196, 1)',
+                                'rgba(255, 255, 0, 1)',
+                                'rgba(91, 155, 213, 1)',
+                                'rgba(102, 153, 0, 1)',
+								'rgba(0, 176, 80, 1)',
+                                'rgba(102, 153, 0, 1)',
+                                'rgba(0, 176, 80, 1)',
+                                'rgba(165, 165, 165, 1)',
+                                'rgba(84, 130, 53, 1)',
+                                'rgba(102, 153, 0, 1)',
+                                'rgba(0, 176, 80, 1)',
+                                'rgba(56, 87, 35, 1)',
+                                'rgba(112, 48, 160,1)'
+                            ],
+            borderColor: [
+                                'rgba(217, 217, 217, 1)',
+                                'rgba(68, 114, 196, 1)',
+                                'rgba(255, 255, 0, 1)',
+                                'rgba(91, 155, 213, 1)',
+                                'rgba(102, 153, 0, 1)',
+                                'rgba(0, 176, 80, 1)',
+                                'rgba(102, 153, 0, 1)',
+                                'rgba(0, 176, 80, 1)',
+                                'rgba(165, 165, 165, 1)',
+                                'rgba(84, 130, 53, 1)',
+                                'rgba(102, 153, 0, 1)',
+                                'rgba(0, 176, 80, 1)',
+                                'rgba(56, 87, 35, 1)',
+                                'rgba(112, 48, 160,1)'
+                        ],
+            borderWidth: 1
+				}]
+            },
+           options: {
+					scales: {
+                            yAxes: [{
+                                    ticks: {
+                                    beginAtZero: true
+                                           }
+                                    }]
+                            },
+                    legend: {
+                            display: false
+                            }
+                    }
+    })
+
+</script>
+
+
+<!-- User Acceptance Test Execution Status Chart -->
+
+<!-- User Acceptance Test Execution Prograss Pie Chart -->
+
+ <script>
+    var ctx = document.getElementById('myChartUATExec');
+    var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Pass', 'No Run'],
+        datasets: [{
+					data: [100,0],
+					backgroundColor: ['rgba(0,245,0,1)', 'rgba(138,0,176,1.2)'],
+					}]
+		},
+        options: {
+            legend: {
+					display: false,
+					labels: {
+								fontColor: 'rgba(255, 99, 132)'
+							}
+					}
+				}
+   })
+
+</script>
+
+<!-- User Acceptance Test Execution Status Bar Chart -->
+<script>     
+	var ctx = document.getElementById('uatexecutionstatusChart');
+	var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Passed',
+        'Failed',
+        'Blocked',
+        'N/A',
+        'Not Completed',
+        'No Run',
+        'Deferred'
+		],
+
+      datasets: [{
+                data:  [
+						47, 0, 0, 1, 0, 0, 0 ],
+				lineTension: 0,
+				backgroundColor: ['rgba(0, 255, 0, 1)',
+                                  'rgba(255, 0, 0, 1)',
+                                  'rgba(169, 169, 169, 1)',
+                                  'rgba(145, 114, 0, 1)',
+                                  'rgba(195, 73, 0, 1)',
+                                  'rgba(19, 120, 181, 1)',
+                                  'rgba(255, 163, 0, 1)'
+                                 ],
+                borderColor: ['rgba(0, 255, 0, 1)',
+                                  'rgba(255, 0, 0, 1)',
+                                  'rgba(169, 169, 169, 1)',
+                                  'rgba(145, 114, 0, 1)',
+                                  'rgba(195, 73, 0, 1)',
+                                  'rgba(19, 120, 181, 1)',
+                                  'rgba(255, 163, 0, 1)'
+                            ],
+				borderWidth: 1,
+				pointBackgroundColor: '#0066FF'
+				},]
+
+		},
+		options: {
+			scales: {
+			yAxes: [{
+			ticks: 	{
+						beginAtZero: true
+					}
+					}]
+				},
+		legend: {
+			display: false
+				}
+    }
+  })
+
+</script>
+
+
+<!-- User Acceptance Test Execution Trend graph -->
+
+<script>     
+
+  // Graphs
+  var ctx = document.getElementById('UATtrendChart')
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        '09 Nov',
+        '10 Nov',
+        '11 Nov',
+        '12 Nov',
+        '13 Nov',
+		'16 Nov',
+        '17 Nov',
+        '18 Nov',
+        '19 Nov',
+        '20 Nov'
+      ],
+      datasets: [{
+
+// Planned line     
+		label: 'Planned',
+        data: [ 5, 9, 14, 19, 24, 28, 33, 38, 42, 47 ],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#6699FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#6699FF'
+      },
+
+// Executed line
+                  {
+		label: 'Executed',
+        data: [0, 0, 1, 10, 15, 15 , 17 ,43 , 47,47],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#0066FF',
+        borderWidth: 2,
+        pointBackgroundColor: '#0066FF'
+      },
+
+//Pass line
+        {
+		label: 'Pass',
+        data: [0, 0, 1, 9, 12, 15 , 17 , 40 , 46, 47],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#33CC00',
+        borderWidth: 2,
+        pointBackgroundColor: '#33CC00'
+      },
+
+ // Fail line
+        {
+		label: 'Fail',
+        data: [0, 0, 0, 1, 0, 0, 0 , 0, 1,  0],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#FF0000',
+        borderWidth: 2,
+        pointBackgroundColor: '#FF0000'
+      }
+        ]
+
+    },
+
+    options: {
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+					}
+				}]
+			},
+		legend: {
+			display: true
+			}
+		}
+  })
+
+</script>
+
+<!-- User Acceptance Test Execution Defect graph -->
+
+ <script>
+
+    var ctx = document.getElementById('UATdefectChart');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+           labels: ['New', 'Assigned to Fix', 'In-Progress', 'Feedback Required', 'R4R in Dev', 'Passed in Dev', 'R4R in Test', 'Passed in Test', 'R4R in Pre-Prod', 'Additional Fix Rquired', 'Ready for Closure', 'Closed','Deferred', 'Rejected'],
+           datasets: [{
+                       label: '# of Votes',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+						backgroundColor: [
+                                           'rgba(217, 217, 217, 1)',
+                                           'rgba(68, 114, 196, 1)',
+                                           'rgba(255, 255, 0, 1)',
+                                           'rgba(91, 155, 213, 1)',
+                                           'rgba(102, 153, 0, 1)',
+										   'rgba(0, 176, 80, 1)',
+                                           'rgba(102, 153, 0, 1)',
+                                           'rgba(0, 176, 80, 1)',
+                                           'rgba(165, 165, 165, 1)',
+                                           'rgba(84, 130, 53, 1)',
+                                           'rgba(102, 153, 0, 1)',
+                                           'rgba(0, 176, 80, 1)',
+                                           'rgba(56, 87, 35, 1)',
+                                           'rgba(112, 48, 160,1)'
+                                        ],
+                        borderColor: [
+                                           'rgba(217, 217, 217, 1)',
+                                           'rgba(68, 114, 196, 1)',
+                                           'rgba(255, 255, 0, 1)',
+                                           'rgba(91, 155, 213, 1)',
+                                           'rgba(102, 153, 0, 1)',
+                                           'rgba(0, 176, 80, 1)',
+                                           'rgba(102, 153, 0, 1)',
+                                           'rgba(0, 176, 80, 1)',
+                                           'rgba(165, 165, 165, 1)',
+                                           'rgba(84, 130, 53, 1)',
+                                           'rgba(102, 153, 0, 1)',
+                                           'rgba(0, 176, 80, 1)',
+                                           'rgba(56, 87, 35, 1)',
+                                           'rgba(112, 48, 160,1)'
+                                     ],
+                        borderWidth: 1
+                    }]
+                },
+                    options: {
+                             scales: {
+                                       yAxes: [{
+                                                 ticks: {
+                                                 beginAtZero: true
+                                                        }
+                                             }]
+                                     },
+                    legend: {
+                              display: false
+                            }
+            }
+       })
+
+</script>
+
+ 
+<!-- Display Test Phase time Lines -->
+
+   <script language = "JavaScript">
+
+         function drawChart() {
+         // Define the chart to be drawn.
+         var data = new google.visualization.DataTable();
+          data.addColumn({
+               type: 'string', id: 'President'
+            });
+
+            data.addColumn({
+               type: 'date', id: 'Start'
+            });
+
+            data.addColumn({
+               type: 'date', id: 'End'
+            });
+
+            data.addRows([
+
+               [ 'Test Planning', new Date(2020, 8, 28), new Date(2020, 9, 23) ],
+               [ 'Systm Test Preparation',      new Date(2020, 9, 5),  new Date(2020, 9, 16) ],
+               [ 'System Integration Test Preparation',  new Date(2020, 9, 19),  new Date(2020, 9, 30) ],
+               [ 'System Test Execution',  new Date(2020, 9, 19),  new Date(2020, 9, 30) ],
+               [ 'System Integration Test Execution',  new Date(2020, 10, 2),  new Date(2020, 10, 6) ],
+               [ 'User Acceptance Test Preparation',  new Date(2020, 9, 19),  new Date(2020, 10, 6) ],
+               [ 'User Acceptance Test Execution',  new Date(2020, 10, 9),  new Date(2020, 10, 20) ],
+               [ 'Contingency Week',  new Date(2020, 10, 23),  new Date(2020, 10, 27) ],
+               [ 'Go-Live & Hyper Care',  new Date(2020, 11, 1),  new Date(2020, 11, 25) ]
+            ]);
+
+            var options = {     
+               width: '100%',
+               height: '100%',
+               colors: ['#6EB009', '#011049', '#01E1F7', '#011049', '#01E1F7', '#9C0DC6', '#9C0DC6', '#FFC300', '#9B1105' ]
+            };
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.Timeline(document.getElementById('timeline'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+
+
+  
+</body>
+
+</html>
